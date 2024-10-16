@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-image: linear-gradient(to right, #4caf50, #1010df);
+  color: white;
+}
+
+header h1 {
+  font-size: 40px;
+}
+
+header p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#bio {
+  margin: 40px 0;
+}
+
+#bio h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+#bio p {
+  font-size: 20px;
+}
+
+#hobbies {
+  margin: 40px 0;
+}
+
+.hobbies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+@media (min-width: 1024px) {
+  .hobbies-container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .hobbies-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hobby {
+    width: 80%;
+  }
+}
+
+@media (max-width: 599px) {
+  header h1 {
+    font-size: 30px;
+  }
+  .hobby {
+    width: 90%;
+  }
+}
+
+.hobby {
+  text-align: center;
+  width: 150px;
+}
+
+.hobby img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hobby img:hover {
+  transform: scale(1.1);
+}
+
+.hobby p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#fun-facts table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 40px 0;
+}
+
+#fun-facts th,
+#fun-facts td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+#fun-facts th {
+  background-color: #4caf50;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer ul li a {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+footer ul li a:hover {
+  background-color: #2f00ff;
+}
+
+section {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2::before {
+  content: "⭐️";
+}
