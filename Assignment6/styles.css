@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.player-container {
+  width: 300px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#cover {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.track-info h2 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.track-info p {
+  margin: 0;
+  color: gray;
+}
+
+.controls button {
+  font-size: 24px;
+  margin: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.controls button:hover {
+  opacity: 0.7;
+}
+
+.progress-container input[type="range"] {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#track-list {
+  list-style: none;
+  padding: 0;
+}
+
+#track-list li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+#track-list li:hover {
+  background-color: #f4f4f4;
+}
