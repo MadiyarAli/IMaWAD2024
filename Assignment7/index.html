@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Superhero Generator</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Superhero Generator</h1>
-    <input type="number" id="heroId" placeholder="Enter number between 0 and 100" min="1" />
-    <button onclick="fetchHero()">Generate Hero</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Superhero Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Superhero Generator</h1>
+      <input
+        type="number"
+        id="heroId"
+        placeholder="Enter number between 0 and 100"
+        min="1"
+      />
+      <button onclick="fetchHero()">Generate Hero</button>
 
-    <div id="heroInfo" class="hero-info">
-      <div id="heroDetails"></div>
+      <div id="heroInfo" class="hero-info">
+        <div id="heroDetails"></div>
+      </div>
     </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

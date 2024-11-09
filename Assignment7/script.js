@@ -3,7 +3,9 @@ async function fetchHero() {
   if (!heroId) {
     alert("Please enter a Hero ID");
     return;
-  }
+  } else if(heroId > 100 || heroId < 1) {
+		alert("The number should be between 0 and 100")
+	}
 
   const url = `https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/id/${heroId}.json`;
 
@@ -19,7 +21,6 @@ async function fetchHero() {
 }
 
 function displayHero(hero) {
-
   const heroDetails = `
 		<img id="heroImage" src="${hero.images.lg}" alt="Hero Image" class="hero-image"></img>
     <h2>${hero.name}</h2>
