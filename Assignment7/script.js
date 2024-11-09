@@ -19,9 +19,6 @@ async function fetchHero() {
 }
 
 function displayHero(hero) {
-  // document.getElementById("heroImage").src = hero.images.lg;
-
-	// console.log(hero)
 
   const heroDetails = `
 		<img id="heroImage" src="${hero.images.lg}" alt="Hero Image" class="hero-image"></img>
