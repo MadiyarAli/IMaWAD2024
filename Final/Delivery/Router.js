@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
-import { AuthContext } from './AuthContext'
+import { AuthContext } from './context/AuthContext'
 import HomeScreen from './components/HomeScreen'
 import ProfileScreen from './components/ProfileScreen'
 import LoginScreen from './components/LoginScreen'
