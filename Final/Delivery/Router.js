@@ -8,6 +8,7 @@ import { AuthContext } from './context/AuthContext'
 import HomeScreen from './components/HomeScreen'
 import ProfileScreen from './components/ProfileScreen'
 import LoginScreen from './components/LoginScreen'
+import SignUpScreen from './components/SignUpScreen'
 
 import ReceiptLong from './assets/TabIcons/ReceiptLong'
 import Menu from './assets/TabIcons/Menu'
@@ -91,7 +92,10 @@ const Router = () => {
               />
             </>
           ) : (
-            <Stack.Screen name="Login" component={LoginScreen} />
+            <>
+              <Stack.Screen name="Login" component={LoginScreen} />
+              <Stack.Screen name="SignUp" component={SignUpScreen} />
+            </>
           )}
         </Stack.Navigator>
       </NavigationContainer>
