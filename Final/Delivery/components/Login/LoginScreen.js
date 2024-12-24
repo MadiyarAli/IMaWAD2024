@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
-import { AuthContext } from '../context/AuthContext'
+import { AuthContext } from '../../context/AuthContext'
 const LoginScreen = () => {
   const navigation = useNavigation()
   const { setIsLoggedIn } = React.useContext(AuthContext)
