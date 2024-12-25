@@ -11,7 +11,10 @@ const MenuItem = ({ item }) => {
       <View style={styles.priceBackground}>
         <Text style={styles.price}>{item.price} ₸</Text>
       </View>
-      <Text style={styles.title}>{item.name}</Text>
+      <View style={styles.titleContainer}>
+        <Text style={styles.title}>{item.name}</Text>
+        <Text style={styles.rating}>⭐{item.rating}</Text>
+      </View>
       <Text style={styles.description}>{item.description}</Text>
       <TouchableOpacity style={styles.button} onPress={() => addToCart(item)}>
         <Text style={styles.buttonText}>Добавить в заказ</Text>
@@ -49,10 +52,20 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginVertical: 5
   },
+  titleContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    marginVertical: 10
+  },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
-    marginVertical: 10
+    fontWeight: 'bold'
+  },
+  rating: {
+    position: 'absolute',
+    right: 17
   },
   description: {
     fontSize: 14,

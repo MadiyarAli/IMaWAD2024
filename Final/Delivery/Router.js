@@ -5,6 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import { AuthContext } from './context/AuthContext'
+import { useCart } from './context/CartContext'
+
 import HomeScreen from './components/HomeScreen'
 import ProfileScreen from './components/ProfileScreen'
 import LoginScreen from './components/Login/LoginScreen'
@@ -13,11 +15,13 @@ import SignUpScreen from './components/Login/SignUpScreen'
 import ReceiptLong from './assets/TabIcons/ReceiptLong'
 import Menu from './assets/TabIcons/Menu'
 import ContactPhone from './assets/TabIcons/ContactPhone'
+import OrderSummaryBar from './components/OrderSummaryBar'
+import Payment from './components/Payment'
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
 
-const BottomTabs = () => {
+const BottomTabs = (cart) => {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -31,8 +35,8 @@ const BottomTabs = () => {
         tabBarStyle: {
           position: 'absolute',
           backgroundColor: '#262626',
-          borderTopRightRadius: 20,
-          borderTopLeftRadius: 20,
+          borderTopRightRadius: cart?.cart?.length > 0 ? 0 : 20,
+          borderTopLeftRadius: cart?.cart?.length > 0 ? 0 : 20,
           elevation: 0,
           shadowColor: 'transparent',
           borderTopWidth: 0,
@@ -68,6 +72,7 @@ const BottomTabs = () => {
 
 const Router = () => {
   const { isLoggedIn } = React.useContext(AuthContext)
+  const { cart } = useCart()
 
   return (
     <View style={styles.container}>
@@ -76,9 +81,17 @@ const Router = () => {
           {isLoggedIn ? (
             <>
               <Stack.Screen name="Tabs" options={{ headerShown: false }}>
-                {() => {
-                  return <BottomTabs />
-                }}
+                {({ navigation }) => (
+                  <>
+                    <BottomTabs cart={cart} navigation={navigation} />
+                    {cart.length > 0 && (
+                      <View style={styles.orderBar}>
+                        <OrderSummaryBar
+                        />
+                      </View>
+                    )}
+                  </>
+                )}
               </Stack.Screen>
               <Stack.Screen
                 name="Home"
@@ -89,6 +102,11 @@ const Router = () => {
                 name="Profile"
                 component={ProfileScreen}
                 options={{ tabBarLabel: 'Profile' }}
+              />
+              <Stack.Screen
+                name="Payment"
+                component={Payment}
+                options={{ tabBarLabel: 'Payment' }}
               />
             </>
           ) : (
@@ -106,6 +124,11 @@ const Router = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1
+  },
+  orderBar: {
+    position: 'absolute',
+    width: '100%',
+    bottom: 70
   },
   tab: {
     marginTop: 8,
