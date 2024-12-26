@@ -12,7 +12,6 @@ import ProfileScreen from './components/ProfileScreen'
 import LoginScreen from './components/Login/LoginScreen'
 import SignUpScreen from './components/Login/SignUpScreen'
 
-import ReceiptLong from './assets/TabIcons/ReceiptLong'
 import Menu from './assets/TabIcons/Menu'
 import ContactPhone from './assets/TabIcons/ContactPhone'
 import OrderSummaryBar from './components/OrderSummaryBar'
@@ -134,7 +133,7 @@ const Router = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   },
   orderBar: {
     position: 'absolute',

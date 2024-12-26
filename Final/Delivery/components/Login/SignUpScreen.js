@@ -41,7 +41,10 @@ const SignUpScreen = ({ navigation }) => {
         <TextInput style={styles.input} secureTextEntry />
       </View>
 
-      <TouchableOpacity style={styles.confirmButton} onPress={() => navigation.goBack()}>
+      <TouchableOpacity
+        style={styles.confirmButton}
+        onPress={() => navigation.goBack()}
+      >
         <Text style={styles.confirmText}>Confirm</Text>
       </TouchableOpacity>
     </View>

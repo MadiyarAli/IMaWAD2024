@@ -71,7 +71,7 @@ const OrderSummaryBar = () => {
               showsVerticalScrollIndicator={cart.length > 3}
             />
           </View>
-          <View style={{marginTop: 'auto' }}>
+          <View style={{ marginTop: 'auto' }}>
             <TouchableOpacity
               style={styles.orderButton}
               onPress={() => navigation.navigate('PaymentScreen')}

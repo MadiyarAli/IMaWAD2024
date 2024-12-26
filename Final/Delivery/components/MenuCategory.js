@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FECB4B'
   },
   noBorder: {
-    borderWidth: 0,
+    borderWidth: 0
   },
   text: {
     fontWeight: 'bold'

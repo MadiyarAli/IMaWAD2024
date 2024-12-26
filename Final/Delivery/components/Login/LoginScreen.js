@@ -32,7 +32,10 @@ const LoginScreen = () => {
           <TextInput style={styles.input} />
           <Text style={styles.text}>Password</Text>
           <TextInput style={styles.input} secureTextEntry />
-          <TouchableOpacity style={styles.loginButton} onPress={() => handleLogin()}>
+          <TouchableOpacity
+            style={styles.loginButton}
+            onPress={() => handleLogin()}
+          >
             <Text style={styles.loginText}>Log in</Text>
           </TouchableOpacity>
           <View style={styles.divider}>

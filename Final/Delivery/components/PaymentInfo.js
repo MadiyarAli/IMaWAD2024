@@ -4,8 +4,7 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  StyleSheet,
-  ScrollView
+  StyleSheet
 } from 'react-native'
 
 import { useNavigation } from '@react-navigation/native'
@@ -23,13 +22,9 @@ const PaymentInfo = () => {
   const [cardError, setCardError] = useState('')
 
   const handleConfirmPayment = () => {
-    // if (!/^\d{16}$/.test(cardNumber.replace(/\s+/g, ''))) {
-    //   setCardError('Invalid type of card number')
-    //   return
-    // }
     setCardError('')
-		console.log('navigated')
-		navigation.navigate('FeedbackScreen')
+    console.log('navigated')
+    navigation.navigate('FeedbackScreen')
   }
 
   return (

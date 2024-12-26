@@ -137,7 +137,9 @@ const FeedbackScreen = () => {
       <View style={{ marginBottom: 40 }}>
         <TouchableOpacity
           style={styles.button}
-          onPress={navigation.navigate('Home')}
+          onPress={() => {
+            navigation.navigate('Tabs')
+          }}
         >
           <Text style={styles.buttonText}>ГОТОВО</Text>
         </TouchableOpacity>
