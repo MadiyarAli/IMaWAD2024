@@ -16,7 +16,9 @@ import ReceiptLong from './assets/TabIcons/ReceiptLong'
 import Menu from './assets/TabIcons/Menu'
 import ContactPhone from './assets/TabIcons/ContactPhone'
 import OrderSummaryBar from './components/OrderSummaryBar'
-import Payment from './components/Payment'
+import PaymentScreen from './components/PaymentScreen'
+import PaymentInfo from './components/PaymentInfo'
+import FeedbackScreen from './components/FeedbackScreen'
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
@@ -86,8 +88,7 @@ const Router = () => {
                     <BottomTabs cart={cart} navigation={navigation} />
                     {cart.length > 0 && (
                       <View style={styles.orderBar}>
-                        <OrderSummaryBar
-                        />
+                        <OrderSummaryBar />
                       </View>
                     )}
                   </>
@@ -104,9 +105,19 @@ const Router = () => {
                 options={{ tabBarLabel: 'Profile' }}
               />
               <Stack.Screen
-                name="Payment"
-                component={Payment}
-                options={{ tabBarLabel: 'Payment' }}
+                name="PaymentScreen"
+                component={PaymentScreen}
+                options={{ tabBarLabel: 'PaymentScreen' }}
+              />
+              <Stack.Screen
+                name="PaymentInfo"
+                component={PaymentInfo}
+                options={{ tabBarLabel: 'PaymentInfo' }}
+              />
+              <Stack.Screen
+                name="FeedbackScreen"
+                component={FeedbackScreen}
+                options={{ tabBarLabel: 'FeedbackScreen' }}
               />
             </>
           ) : (
@@ -123,7 +134,7 @@ const Router = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   },
   orderBar: {
     position: 'absolute',

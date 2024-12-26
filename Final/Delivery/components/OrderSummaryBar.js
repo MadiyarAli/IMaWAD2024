@@ -74,7 +74,7 @@ const OrderSummaryBar = () => {
           <View style={{marginTop: 'auto' }}>
             <TouchableOpacity
               style={styles.orderButton}
-              onPress={() => navigation.navigate('Payment')}
+              onPress={() => navigation.navigate('PaymentScreen')}
             >
               <Text style={styles.orderButtonText}>Заказать</Text>
             </TouchableOpacity>
