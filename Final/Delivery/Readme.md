@@ -20,8 +20,8 @@ git clone https://github.com/your-username/your-repository-name.git
 cd your-repository-name
 2. Install Dependencies
 Run the following command to install the required packages:
-
 npm install
+
 3. Start the Development Server
 To start the development server and launch the app, run:
 
